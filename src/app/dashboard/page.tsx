@@ -79,11 +79,18 @@ export default function Dashboard() {
         <h1 className="text-4xl">Dashboard of our community</h1>
         <div className="dashboard mt-32 rounded-lg p-4 bg-slate-800">
           <form action="" className="grid grid-cols-6 items-center text-black">
-            <input value={newItem.name} onChange={(e) => setNewItem({...newItem, name: e.target.value})} className="col-span-3 p-3 border" type="text" placeholder='Enter item' />
+            <input value={newItem.name} onChange={(e) => setNewItem({...newItem, name: e.target.value})} className="col-span-3 p-3 border text-white" type="text" placeholder='Enter item' />
             <input value={newItem.name} onChange={(e) => setNewItem({...newItem, price: e.target.value})} className="col-span-2 p-3 border mx-3" type="number" placeholder='Enter Price' />
             <button onClick={addItem} className="text-white bg-slate-950 hover:bg-slate-900 p-3 text-xl" type="submit">+</button>
           </form>
           <ul>
+            <li className="my-4 w-full flex justify-between bg-slate-950">
+                <div className="p-4 w-full flex justify-between">
+                  <span className="capitalize">Welcome & probe our app</span>
+                  <span>Databoard Team</span>
+
+                </div>
+            </li>
             {items.map((item, index) => (
               <li key={index} className="my-4 w-full flex justify-between bg-slate-950">
                 <div className="p-4 w-full flex justify-between">
